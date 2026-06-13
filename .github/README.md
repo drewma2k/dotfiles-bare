@@ -8,6 +8,13 @@ directory.
 > renders on the GitHub repo page without putting a `README.md` in the root of
 > `$HOME`.
 
+## Contents
+
+- [How it works](#how-it-works)
+- [Daily usage](#daily-usage)
+- [oh-my-zsh customs](#oh-my-zsh-customs)
+- [Bootstrapping a new machine](#bootstrapping-a-new-machine)
+
 ## How it works
 
 A bare repo lives at `~/.dotfiles` with its git-dir there and its work-tree set
