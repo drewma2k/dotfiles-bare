@@ -1,0 +1,26 @@
+font-thicken=true
+theme = Flexoki Dark
+window-vsync=true
+macos-titlebar-proxy-icon=hidden
+macos-icon=custom-style
+macos-icon-ghost-color=black
+macos-icon-screen-color=green
+macos-icon-frame=plastic
+command = /opt/homebrew/bin/fish --login --interactive
+cursor-style = block
+cursor-style-blink = true
+
+# window-decoration=false # unable to move window with mouse
+
+# Splits
+# keybind=ctrl+b>shift+'=new_split:right
+# keybind=ctrl+b>shift+5=new_split:down
+
+# Navigation
+# keybind=ctrl+h=goto_split:left
+# keybind=ctrl+j=goto_split:bottom
+# keybind=ctrl+k=goto_split:top
+# keybind=ctrl+l=goto_split:right
+
+# Tabs
+# keybind=ctrl+b>c=new_tab

@@ -1,0 +1,32 @@
+#!/bin/bash
+set -euo pipefail
+
+# Display help message
+if [[ "${1:-}" == "--help" ]] || [[ "${1:-}" == "-h" ]]; then
+  echo "Usage: standup [OPTIONS]"
+  echo ""
+  echo "Creates daily standup notes and opens them in nvim."
+  echo ""
+  echo "Options:"
+  echo "  -h, --help    Show this help message"
+  echo ""
+  echo "Files are created at: ~/Documents/notes/standup/YYYY-MM-DD.md"
+  exit 0
+fi
+
+DIR="$HOME/Documents/notes/standup"
+mkdir -p $DIR
+cd $DIR
+DATE=$(date +%Y-%m-%d)
+
+# If we haven't updated symlinks yet
+if [[ $DATE.md != $(readlink today) ]]; then
+  # switch values of today and yesterday
+  ln -sf $(readlink today) yesterday
+  ln -sf $DATE.md today
+  # add structure
+  printf "# Todo:\n\n# Log:\n\n# Notes:\n\n" >> $(readlink today)
+fi
+
+# open vim
+nvim --cd . -o $(readlink today) $(readlink yesterday)
