@@ -16,7 +16,6 @@ if status is-interactive
     abbr --add aliases 'nvim ~/.config/oh-my-zsh-custom/aliases.zsh'
     abbr --add zebrc 'nvim ~/.zshrc'
     abbr --add nvrc 'nvim ~/.config/nvim/init.lua'
-    abbr --add nvsrc 'cd ~/src/dotfiles'
     abbr --add src 'cd ~/src'
 
     # formatted date

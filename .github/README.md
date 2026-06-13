@@ -41,13 +41,40 @@ indirection.
 
 ## Tracked files
 
+Shells & prompt:
+
 - `.zshrc`
-- `.vimrc`
-- `.tmux.conf`
 - `.config/fish/config.fish`
 - `.config/fish/fish_plugins`
+- `.config/fish/functions/awsp.fish`
+- `.config/oh-my-zsh-custom/aliases.zsh`
+- `.config/oh-my-zsh-custom/fix_hyphen_completion.zsh`
+- `.config/oh-my-zsh-custom/git-worktree.zsh`
+- `.config/oh-my-zsh-custom/pomo.zsh`
+
+Editors & terminal:
+
+- `.vimrc`
+- `.tmux.conf`
+- `.config/ghostty/config`
+- `.config/ranger/rc.conf`
+
+Git & scripts:
+
 - `.gitconfig`
+- `bin/standup`
+- `bin/office_tracker.sh`
+
+Meta:
+
 - `.github/README.md` (this file)
+
+### oh-my-zsh customs
+
+The oh-my-zsh custom files live in `~/.config/oh-my-zsh-custom/` rather than the
+default `~/.oh-my-zsh/custom/`. That default sits inside the oh-my-zsh git clone,
+and a bare repo can't track files nested inside another repo's work-tree. `.zshrc`
+sets `ZSH_CUSTOM` to point at the tracked location, so oh-my-zsh still loads them.
 
 ## Bootstrapping a new machine
 
