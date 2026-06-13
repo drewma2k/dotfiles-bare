@@ -13,7 +13,7 @@ if status is-interactive
     function fish_mode_prompt; end
 
     # editing config files
-    abbr --add aliases 'nvim ~/.oh-my-zsh/custom/aliases.zsh'
+    abbr --add aliases 'nvim ~/.config/oh-my-zsh-custom/aliases.zsh'
     abbr --add zebrc 'nvim ~/.zshrc'
     abbr --add nvrc 'nvim ~/.config/nvim/init.lua'
     abbr --add nvsrc 'cd ~/src/dotfiles'
