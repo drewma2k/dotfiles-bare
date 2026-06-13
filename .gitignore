@@ -1,0 +1,12 @@
+# Managed by the dotfiles bare repo (git-dir ~/.dotfiles, work-tree $HOME).
+# Because the work-tree is $HOME, this guards against accidentally committing
+# sensitive or runtime files. Tracked files are still added explicitly; this
+# just makes a stray `config add -A` / `config add ~/.claude` safe.
+
+# Claude Code: ignore everything under ~/.claude except the tracked config.
+# (~/.claude holds credentials, conversation transcripts, memory, caches, logs.)
+.claude/*
+!.claude/CLAUDE.md
+!.claude/settings.json
+!.claude/keybindings.json
+!.claude/statusline-command.sh
