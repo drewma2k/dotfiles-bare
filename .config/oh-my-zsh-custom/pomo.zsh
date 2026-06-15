@@ -20,5 +20,10 @@ function pomo() {
       fi
     done
     osascript -e "display notification \"${msg}\" with title \"Pomo CLI\" sound name \"Bottle.aiff\""
+    # Inside tmux the macOS banner is easy to miss, so surface a popup too.
+    if [ -n "$TMUX" ]; then
+      tmux display-popup -T ' Pomo CLI ' -w 50 -h 6 -E \
+        "printf '\\n  %s\\n\\n  press Enter to close ' '${msg}'; read"
+    fi
     print "\n"
 }

@@ -42,7 +42,7 @@ echo "Are you in the office today? (yes/no): "
 read -r response
 
 # Normalize response to lowercase
-response=$(echo "$response" | tr '[upper:]' '[lower:]')
+response=$(echo "$response" | tr '[:upper:]' '[:lower:]')
 
 # Validate response
 case "$response" in

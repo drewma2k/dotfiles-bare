@@ -17,6 +17,7 @@ if status is-interactive
     abbr --add zebrc 'nvim ~/.zshrc'
     abbr --add nvrc 'nvim ~/.config/nvim/init.lua'
     abbr --add src 'cd ~/src'
+    abbr --add reload 'source ~/.config/fish/config.fish'
 
     # formatted date
     abbr --add ddef 'date +%Y-%m-%d'
@@ -36,6 +37,9 @@ if status is-interactive
     abbr --add ict 'kitten icat'
     abbr --add db '/opt/homebrew/Cellar/databricks/0.226.0/bin/databricks'
     abbr --add lst 'tree --dirsfirst -a -L 1'
+
+    # git: zsh-muscle-memory alias for plugin's gpu
+    abbr --add gpsup 'git push origin (__git.current_branch) --set-upstream'
 
     # git worktree helpers
     function gwtx --description 'Create new worktree and branch'

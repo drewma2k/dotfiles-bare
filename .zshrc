@@ -84,6 +84,14 @@ plugins=(
 		 # fzf
         )
 
+# Startup-time perf flags (generic, not work-specific) — must be set before
+# oh-my-zsh is sourced.
+DISABLE_AUTO_UPDATE="true"        # skip omz update checks on every launch
+DISABLE_COMPFIX="true"            # skip insecure-directory audit during compinit
+ZSH_DISABLE_COMPFIX="true"        # (alias of the above for older omz)
+DISABLE_LS_COLORS="true"          # we set our own LS_COLORS below
+ZSH_COMPDUMP="$HOME/.zcompdump"   # fixed dump path, avoids per-host recompute
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -111,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export HOMEBREW_PREFIX=$(brew --prefix) # broken for some reason
+export HOMEBREW_PREFIX=/opt/homebrew # hardcoded to avoid a brew subshell on every startup
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 export PATH="/opt/homebrew/opt/sphinx-doc/bin:$PATH"
 # source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
