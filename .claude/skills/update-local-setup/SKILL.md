@@ -30,4 +30,14 @@ description: >-
 6. Consistency sweep: re-read rules/docs/skills that reference what you touched;
    update anything now inaccurate - including the skill's own environment inventory.
 
-# (references/environment.md - a machine-specific inventory - omitted; rewrite per host)
+## This host
+
+`references/environment.md` is the machine-specific inventory: which mechanism owns
+what, where each tracked source of truth lives, what the gitignore allowlist currently
+covers, and what does *not* exist here. Read it at step 1, and update it at step 6
+whenever you change the shape of the setup.
+
+It is host-local and **untracked on purpose** (`~/.gitignore` excludes
+`.claude/skills/*/references/environment.md`), so it is the one file this skill's own
+workflow exempts from steps 4 and 5 — don't try to commit it or log it upstream.
+Write it fresh on each host rather than porting one machine's copy to another.

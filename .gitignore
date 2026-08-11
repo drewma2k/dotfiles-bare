@@ -13,4 +13,7 @@
 !.claude/statusline-command.sh
 !.claude/skills/
 .claude/skills/*/.venv/
+# Per-host inventories: a skill's references/environment.md describes THIS machine
+# (paths, settings values, which dirs exist). Written fresh per host, never ported.
+.claude/skills/*/references/environment.md
 !.claude/rules/

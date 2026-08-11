@@ -93,8 +93,9 @@ until it's whitelisted. **Add the `!`-allowlist line to `~/.gitignore` first, th
 the files.**
 
 Currently whitelisted: `CLAUDE.md`, `settings.json`, `settings.local.json`,
-`keybindings.json`, `statusline-command.sh`, `skills/` (minus each skill's `.venv/`),
-and `rules/`. Not yet tracked: `hooks/`, `docs/` — add `!.claude/hooks/` /
+`keybindings.json`, `statusline-command.sh`, `skills/` (minus each skill's `.venv/` and
+minus `skills/*/references/environment.md`, a per-host inventory kept local), and
+`rules/`. Not yet tracked: `hooks/`, `docs/` — add `!.claude/hooks/` /
 `!.claude/docs/` first if the user wants those tracked.
 
 Note `rules/` is allowlisted but `~/.claude/rules/` does not exist yet on this host —
