@@ -12,5 +12,11 @@
   "effortLevel": "high",
   "tui": "fullscreen",
   "editorMode": "vim",
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "preferredNotifChannel": "terminal_bell",
+  "permissions": {
+    "additionalDirectories": [
+      "~/"
+    ]
+  }
 }

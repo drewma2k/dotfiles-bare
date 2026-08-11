@@ -70,3 +70,8 @@ if status is-interactive
 
 	zoxide init fish | source
 end
+
+if status is-login
+    # GitHub MCP server token (used by Claude Code's github MCP)
+    set -gx GITHUB_MCP_ACCESS_TOKEN (gh auth token --hostname github.com)
+end

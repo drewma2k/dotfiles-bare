@@ -11,3 +11,6 @@
 !.claude/settings.local.json
 !.claude/keybindings.json
 !.claude/statusline-command.sh
+!.claude/skills/
+.claude/skills/*/.venv/
+!.claude/rules/

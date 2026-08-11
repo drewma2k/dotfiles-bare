@@ -159,3 +159,6 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 # zprof
+
+# GitHub MCP server token (used by Claude Code's github MCP)
+export GITHUB_MCP_ACCESS_TOKEN=$(gh auth token --hostname github.com)
